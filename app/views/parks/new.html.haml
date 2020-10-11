@@ -1,10 +1,8 @@
 .wrapper
   .header
   .contents
-    .number
-      0205
-    .price
-      %P
-        ¥
-      %p
-        100        
+    = form_for @park, local: true  do |f|
+      .number
+        = f.number_field :number
+      .send_buttun
+        = f.submit

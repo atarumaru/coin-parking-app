@@ -1,6 +1,6 @@
 class ParksController < ApplicationController
   def index
-    @number = Park.find(1)
+    @number = Park.first
   end
 
   def new
@@ -14,14 +14,15 @@ class ParksController < ApplicationController
       if @park.id != 1
       @pronumber = Park.first
       @pronumber.delete
-      redirect_to root_path
+      render :index
       else
-        redirect_to root_path
+      render :index
       end
     end
   end
 
   def show
+    @park = Park.first
     end_point
     tictok
   end
@@ -32,16 +33,14 @@ class ParksController < ApplicationController
   end
 
   def tictok
-    @@fee = @@end_point - @@point + 1800
-    puts @@fee
+    @@fee = @@end_point - @@point 
     if @@fee <= 1800
-        puts @@fee
-        puts '無料です'
+        @finalfee = 0
     elsif @@fee < 21600
-        puts '100'
+        @finalfee = 100
     else
       final_cul
-      puts @@final_fee
+      @finalfee = @@final_fee
     end
 
   end
@@ -59,9 +58,7 @@ class ParksController < ApplicationController
   def final_cul
     ex_time = @@fee - 21600
     ex = ex_time / 21600
-    puts ex
     exb = ex.floor
-    puts exb
     @@final_fee = 100 + exb * 50
   end
 

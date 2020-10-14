@@ -2,9 +2,7 @@
   .header
   .contents
     .number
-      0205
+      = @park.number
     .price
-      %P
-        ¥
-      %p
-        100        
+      = link_to  park_path (@park) do
+        料金を確認する    

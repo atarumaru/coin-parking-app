@@ -1,21 +1,29 @@
 .wrapper{
-  background-color: rgb(245, 245, 245);
   height: 800px;
   width: 100%;
+  background-color: #f6f6f6;
 }
 .contents{
-  height: 100%;
   width: 100%;
+  margin: 30px auto;
+}
+.new_park{
+  width: 100px;
+  margin: 0px auto;
 }
 .number{
-  margin: 0px auto;
   width: 650px;
   height: 30%;
-  background-color: red;
 }
 .price{
   margin: 50px auto;
   width: 650px;
   height: 20%;
   background-color:white;
+}
+.header{
+  height: 55px;
+  width: 100%;
+  padding: 0 150px;
+  background-color: #55c500;
 }

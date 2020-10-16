@@ -18,6 +18,8 @@ class ParksController < ApplicationController
       else
       render :index
       end
+    else
+      redirect
     end
   end
 
@@ -60,6 +62,10 @@ class ParksController < ApplicationController
     ex = ex_time / 21600
     exb = ex.floor
     @@final_fee = 100 + exb * 50
+  end
+
+  def redirect
+    redirect_to  root_path,notice:'redirectに成功しました'
   end
 
 end

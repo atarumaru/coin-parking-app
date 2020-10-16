@@ -1,8 +1,12 @@
 .wrapper
   .header
+    .title
+      PARKAPP
   .contents
     = form_for @park, local: true  do |f|
+      .sign
+        駐輪番号を入力して下さい
       .number
         = f.number_field :number
-      .send_buttun
-        = f.submit
+      .send_button
+        = f.submit "保存する"

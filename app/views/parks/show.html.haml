@@ -1,4 +1,14 @@
-.number
-  = @park.number
-.price
-  = @finalfee
+.wrapper
+  .header
+    .title
+      ParkApp
+  .contents
+    .number
+      = @park.number
+    .price
+      = @finalfee
+    .button
+      = link_to  parks_path do
+        戻る    
+
+

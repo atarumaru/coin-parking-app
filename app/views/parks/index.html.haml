@@ -1,8 +1,10 @@
 .wrapper
   .header
+    .title
+      ParkApp
   .contents
-    .number
+    .park__number
       = @park.number
-    .price
+    .check
       = link_to  park_path (@park) do
         料金を確認する    

@@ -1,7 +1,8 @@
 .wrapper
   .header
     .title
-      PARKAPP
+      = link_to parks_path (@park), class: "indexLink"  do
+        ParkApp
   .contents
     = form_for @park, local: true  do |f|
       .sign

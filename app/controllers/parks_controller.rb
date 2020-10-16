@@ -1,6 +1,6 @@
 class ParksController < ApplicationController
   def index
-    @number = Park.first
+    @park = Park.first
   end
 
   def new
@@ -10,7 +10,6 @@ class ParksController < ApplicationController
   def create
     @park = Park.create(park_params)
     if @park.save
-      start_point
       if @park.id != 1
       @pronumber = Park.first
       @pronumber.delete
@@ -35,7 +34,8 @@ class ParksController < ApplicationController
   end
 
   def tictok
-    @@fee = @@end_point - @@point 
+    start_point
+    @@fee = @@end_point - @point 
     if @@fee <= 1800
         @finalfee = 0
     elsif @@fee < 21600
@@ -48,8 +48,7 @@ class ParksController < ApplicationController
   end
 
   def start_point
-    t = Time.now
-    @@point = t.tv_sec
+    @point = @park.created_at.tv_sec
   end
 
   def end_point

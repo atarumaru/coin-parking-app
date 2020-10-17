@@ -19,10 +19,11 @@
   font-size: 20px;
 }
 .price{
-  margin: 50px auto;
-  width: 650px;
-  height: 20%;
-  background-color:white;
+ width: 90%;
+ background-color: #fff; 
+ border: 1px solid #ccc;
+ font-size: 50px;
+ text-align: center;
 }
 .header{
   height: 55px;
@@ -42,11 +43,9 @@
   }
 } 
 
-.sign{
-  font-size: 20px;
-  width: 400px;
-  padding-top: 100px;
-  margin: auto;
+.mention{
+  font-size: 15px;
+  
 }
 .send_button{
   height: 50px;
@@ -55,6 +54,34 @@
   padding-top:30px;
   padding-left: 40px;
 }
-.park__number{
+.park{ 
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: flex;
   font-size: 50px;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+ 
+}
+.content{
+  width: 400px;
+  margin: 0px auto;
+  padding-top: 170px;
+}
+.check{
+  margin-top: 50px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+}
+.new-button{
+  margin-top: 30px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
 }

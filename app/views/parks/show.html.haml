@@ -8,10 +8,13 @@
         .sign
           駐輪番号
         .park__number
-          = @park.number
+          = @park.number 
       .price
+        %span
+          ¥
         = @finalfee
-      
+        %span
+          円
       .button
         = link_to  parks_path do
           戻る    

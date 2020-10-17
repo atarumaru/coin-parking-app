@@ -4,12 +4,14 @@
       ParkApp
   .contents
     .content
-      .sign
-        駐輪番号
-      .park__number
-        = @park.number
+      .park
+        .sign
+          駐輪番号
+        .park__number
+          = @park.number
       .price
         = @finalfee
+      
       .button
         = link_to  parks_path do
           戻る    

@@ -15,8 +15,13 @@
         = @finalfee
         %span
           円
-      .button
-        = link_to  parks_path do
-          戻る    
+      .buttons
+        .buttons__new
+          = link_to new_park_path do
+            新しく駐輪番号を登録する
+        .buttons__back
+          = link_to  parks_path do
+            戻る
+
 
 

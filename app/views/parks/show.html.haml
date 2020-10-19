@@ -1,7 +1,8 @@
 .wrapper
   .header
     .title
-      ParkApp
+      = link_to parks_path (@park), class: "indexLink"  do
+        ParkApp
   .contents
     .content
       .park

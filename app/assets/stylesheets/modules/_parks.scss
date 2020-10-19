@@ -47,9 +47,10 @@
 } 
 
 .mention{
-  font-size: 25px;
+  font-size: 20px;
   padding-top: 170px;
   text-align: center;
+  color: red;
 }
 .send_button{
   height: 50px;
@@ -80,8 +81,9 @@
   text-align: center;
   text-decoration: none;
   font-size: 25px;
+  background-color: red;
   a{
-    color: black;
+    color: white;
   }
 }
 a{
@@ -94,7 +96,7 @@ a{
   text-align: center;
   text-decoration: none;
   font-size: 25px;
-  color: black;
+  background-color: #ccc;
   a{
    color: black; 
   }

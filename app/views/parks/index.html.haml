@@ -1,8 +1,18 @@
 .wrapper
   .header
+    .title
+      = link_to parks_path (@park), class: "indexLink"  do
+        ParkApp
   .contents
-    .number
-      = @park.number
-    .price
-      = link_to  park_path (@park) do
-        料金を確認する    
+    .content
+      .park
+        .sign
+          駐輪番号
+        .park__number
+          = @park.number
+      .check
+        = link_to  park_path (@park) do
+          料金を確認する 
+      .new-button
+        = link_to new_park_path do
+          駐輪し直す   

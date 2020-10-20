@@ -1,4 +1,28 @@
-.number
-  = @park.number
-.price
-  = @finalfee
+.wrapper
+  .header
+    .title
+      = link_to parks_path (@park), class: "indexLink"  do
+        ParkApp
+  .contents
+    .content
+      .park
+        .sign
+          駐輪番号
+        .park__number
+          = @park.number 
+      .price
+        %span
+          ¥
+        = @finalfee
+        %span
+          円
+      .buttons
+        .buttons__new
+          = link_to new_park_path do
+            新しく駐輪番号を登録する
+        .buttons__back
+          = link_to  parks_path do
+            戻る
+
+
+

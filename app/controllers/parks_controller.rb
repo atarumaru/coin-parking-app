@@ -60,7 +60,7 @@ class ParksController < ApplicationController
     ex_time = @@fee - 21600
     ex = ex_time / 21600
     exb = ex.floor
-    @@final_fee = 100 + exb * 50
+    @@final_fee = 150 + exb * 50
   end
 
   def redirect
